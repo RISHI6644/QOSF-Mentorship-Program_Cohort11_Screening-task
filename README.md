@@ -1,6 +1,6 @@
 # QOSF-Mentorship-Program_Cohort11_Screening-task
 
-This repository contains my solution for the screening task for the Quantum Mentorship program.
+This repository contains my solution for the screening task for the QOSF Mentorship program.
 
 ## Task 2: Complex Amplitudes
 
