@@ -14,6 +14,22 @@ The main goal was to implement a routine that prepares a two-qubit quantum state
 * **Testing:** Unit tests must be written to verify normalization and correct output dimension.
 * **Stretch Goal:** Generalize the implementation to support a three-qubit state (8 amplitudes).
 
+## Key Concepts
+
+1.  **Quantum State Vectors**
+    * A two-qubit system has four possible basis states: $|00\rangle, |01\rangle, |10\rangle, |11\rangle$.
+    * Any general quantum state $|\psi\rangle$ is a linear combination (superposition) of these basis states:
+        $|\psi\rangle = a_0|00\rangle + a_1|01\rangle + a_2|10\rangle + a_3|11\rangle$
+    * Here, $a_0, a_1, a_2, a_3$ are complex numbers called **amplitudes**. The entire state can be represented as a 4-element column vector (or a 1D NumPy array):
+        $|\psi\rangle = \begin{bmatrix} a_0 \\ a_1 \\ a_2 \\ a_3 \end{bmatrix}$
+
+2.  **Normalization (The Born Rule)**
+    * Quantum states must represent a total probability of 1. The probability of measuring a specific basis state (e.g., $|01\rangle$) is the squared magnitude of its amplitude ($|a_1|^2$).
+    * Therefore, the sum of all probabilities must be 1:
+        $|a_0|^2 + |a_1|^2 + |a_2|^2 + |a_3|^2 = 1$
+    * For this task, if the given amplitudes do **not** satisfy this, we must scale all amplitudes by dividing each one by the **L2-norm** (or "length") of the vector:
+        $Norm = \sqrt{|a_0|^2 + |a_1|^2 + |a_2|^2 + |a_3|^2}$
+
 ## Implementation Details
 
 To adhere to the **DRY (Don't Repeat Yourself)** principle and ensure robust error handling, the logic is split into a general helper function and specific task functions.
