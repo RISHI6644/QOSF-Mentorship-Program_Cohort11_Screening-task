@@ -20,8 +20,7 @@ The main goal was to implement a routine that prepares a two-qubit quantum state
     * A two-qubit system has four possible basis states: $|00\rangle, |01\rangle, |10\rangle, |11\rangle$.
     * Any general quantum state $|\psi\rangle$ is a linear combination (superposition) of these basis states:
         $|\psi\rangle = a_0|00\rangle + a_1|01\rangle + a_2|10\rangle + a_3|11\rangle$
-    * Here, $a_0, a_1, a_2, a_3$ are complex numbers called **amplitudes**. The entire state can be represented as a 4-element column vector (or a 1D NumPy array):
-        $|\psi\rangle = \begin{bmatrix} a_0 \\ a_1 \\ a_2 \\ a_3 \end{bmatrix}$
+    * Here, $a_0, a_1, a_2, a_3$ are complex numbers called **amplitudes**. The entire state can be represented as a 4-element column vector (or a 1D NumPy array)
 
 2.  **Normalization (The Born Rule)**
     * Quantum states must represent a total probability of 1. The probability of measuring a specific basis state (e.g., $|01\rangle$) is the squared magnitude of its amplitude ($|a_1|^2$).
